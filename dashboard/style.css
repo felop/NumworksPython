@@ -2,6 +2,7 @@ body {
   background-color: rgb(12,12,12);
   text-align: center;
   color: rgb(200,210,210);
+  padding-bottom: 25%;
 }
 
 #body {
@@ -18,7 +19,7 @@ body {
   border-radius: 13px;
   margin-top: 5%;
   width: 47%;
-  height: 34em;
+  height: 28vw;
   display: block;
   background-image: url("numworksDark.png");
   background-position: bottom;
