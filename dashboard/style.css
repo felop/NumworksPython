@@ -24,8 +24,9 @@ body {
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  position: fixed;
   opacity: 0;
+  z-index: -1;
 }
 
 .triggerTxtEditor {
@@ -37,15 +38,15 @@ body {
 }
 
 @keyframes TxtEditor {
-  from {opacity: 0;margin-top: 50%;}
+  from {opacity: 0;margin-top: 50%;z-index: -1;position: fixed;}
 
-  to {opacity: 1;margin-top: 5%;}
+  to {opacity: 1;margin-top: 5%;z-index: 1;position: relative;}
 }
 
 #txtEditorArea {
   resize: none;
   background-color: rgb(0,4,0);
-  z-index: 2;
+  z-index: 1;
   border: none;
   color: white;
   position:absolute;
@@ -56,9 +57,11 @@ body {
 }
 
 #add_program {
-  float: right;
+  float: none;
   border-radius: 13px;
   margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
   height: 200%;
   background-color: rgb(200,50,50);
@@ -68,6 +71,7 @@ body {
   flex-direction: column;
   padding-top: 70px;
   padding-bottom: 0px;
+  z-index: 5;
 }
 
 .triggerAddProgramReveal {
@@ -94,8 +98,9 @@ body {
 }
 
 @keyframes AddProgramTxtEditor {
-  from {float:none;}
-  to {float:right;}
+  from {float:left;background-color: red;
+  }
+  to {float:right;background-color: blue;}
 }
 
 #ajouteruncours {
