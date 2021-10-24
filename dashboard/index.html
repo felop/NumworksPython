@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function ajouteruncours() {
+        document.getElementById('inputType').className = 'triggerInputType';
+        document.getElementById('add_program').className = 'triggerAddProgramReveal';
+      }
+      function startTXT() {
+        document.getElementById('txtEditor').className = 'triggerTxtEditor';
+        //document.getElementById('add_program').className = 'triggerAddProgramTxtEditor';
+      }
+      function startIMG() {
+        document.getElementById('').className = '';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="body">
+      <div id="txtEditor">
+        <form action="index.html" method="post">
+          <textarea id="txtEditorArea" name="text" cols="42" rows="10" placeholder="copiez-collez votre cours ici..."></textarea>
+        </form>
+      </div>
+
+      <div id="add_program" onclick="ajouteruncours()" value="Click">
+        <div id="ajouteruncours"><h1>＋ ajouter un cours</h1></div>
+        <div id="inputType">
+          <div class="input" id="inputImg">
+            <h4><a href="#" onclick="startTXT()" style="color: #FFFFFF;">ajouter un fichier texte</a></h4>
+          </div>
+          <div class="input" id="inputTxt">
+            <h4><a href="#" onclick="startIMG()" style="color: #FFFFFF;">ajouter une photo</a></h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

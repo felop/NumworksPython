@@ -1,0 +1,143 @@
+body {
+  background-color: rgb(12,12,12);
+  text-align: center;
+  color: rgb(200,210,210);
+}
+
+#body {
+  display: inline-block;
+  float:none;
+  text-align: center;
+  width: 60%;
+  height: 100%;
+}
+
+#txtEditor {
+  float: left;
+  background-color: rgb(37,37,37);
+  border-radius: 13px;
+  margin-top: 5%;
+  width: 47%;
+  height: 34em;
+  display: block;
+  background-image: url("numworksDark.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0;
+}
+
+.triggerTxtEditor {
+  display: block;
+  animation: TxtEditor;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes TxtEditor {
+  from {opacity: 0;margin-top: 50%;}
+
+  to {opacity: 1;margin-top: 5%;}
+}
+
+#txtEditorArea {
+  resize: none;
+  background-color: rgb(0,4,0);
+  z-index: 2;
+  border: none;
+  color: white;
+  position:absolute;
+  bottom: 42.6%;
+  width: 52.6%;
+  height: 29.5%;
+  transform: translateX(-50%);
+}
+
+#add_program {
+  float: right;
+  border-radius: 13px;
+  margin-top: 5%;
+  width: 50%;
+  height: 200%;
+  background-color: rgb(200,50,50);
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  flex-direction: column;
+  padding-top: 70px;
+  padding-bottom: 0px;
+}
+
+.triggerAddProgramReveal {
+  animation: AddProgramReveal;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes AddProgramReveal {
+  from
+  {padding-top: 70px;
+  padding-bottom: 0px;}
+  to
+  {padding-bottom: 40px;
+  padding-top: 30px;}
+}
+
+.triggerAddProgramTxtEditor {
+  animation: AddProgramTxtEditor;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes AddProgramTxtEditor {
+  from {float:none;}
+  to {float:right;}
+}
+
+#ajouteruncours {
+  text-align: center;
+}
+
+#inputType {
+  height: 70px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+}
+
+.triggerInputType {
+  animation: showInputType;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes showInputType {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.input {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 40%;
+  height: 100%;
+  text-decoration: underline;
+}
+
+#inputImg {
+  float: left;
+  border-right: solid 2px rgb(210,210,210);
+}
+
+#inputTxt {
+  float: right;
+  border-left: solid 2px rgb(210,210,210);
+}
