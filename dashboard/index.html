@@ -19,12 +19,21 @@
           reader.readAsDataURL(input.files[0]);
         }
       }
+      var AddProgramState = 0;
       function ajouteruncours() {
-        document.getElementById('inputType').className = 'triggerInputType';
-        document.getElementById('add_program').className = 'triggerAddProgramReveal';
+        if (AddProgramState === 0) {
+          AddProgramState = 1;
+          document.getElementById('inputType').className = 'triggerInputType';
+          document.getElementById('add_program').style.animationPlayState = 'running';
+          setTimeout(function() {document.getElementById('add_program').style.animationPlayState = 'paused'}, 250);
+        }
       }
       function startTXT() {
+        document.getElementById('inputType').style.animationFillMode = "none";
+        document.getElementById('inputType').style.opacity = 0;
         document.getElementById('txtEditor').className = 'triggerTxtEditor';
+        document.getElementById('add_program').style.animationPlayState = 'running';
+        document.getElementById('ajouteruncours').innerHTML = "<h1>valider</h1>"
       }
       function startIMG() {
         document.getElementById('imgEditor').className = 'triggerImgEditor';

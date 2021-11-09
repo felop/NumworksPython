@@ -135,22 +135,44 @@ body {
   padding-top: 70px;
   padding-bottom: 0px;
   z-index: 5;
-}
 
-.triggerAddProgramReveal {
   animation: AddProgramReveal;
-  animation-duration: 0.25s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+  animation-play-state: paused;
 }
 
 @keyframes AddProgramReveal {
-  from
+  0%
   {padding-top: 70px;
   padding-bottom: 0px;}
-  to
+  45%
   {padding-bottom: 40px;
   padding-top: 30px;}
+  55%
+  {background-color: rgb(200,50,50);
+   padding-bottom: 40px;
+   padding-top: 30px;}
+  100%
+  {background-color: rgb(50,50,50);
+   padding-top: 70px;
+   padding-bottom: 0px;}
+}
+
+.turnIntoButton {
+  animation: AddProgramToButton;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-play-state: running;
+}
+
+@keyframes AddProgramToButton {
+  from
+  {background-color: rgb(200,50,50);}
+  to
+  {background-color: rgb(50,50,200);}
 }
 
 #ajouteruncours {
