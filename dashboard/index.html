@@ -31,17 +31,28 @@
       function startTXT() {
         document.getElementById('inputType').style.animationFillMode = "none";
         document.getElementById('inputType').style.opacity = 0;
-        document.getElementById('txtEditor').className = 'triggerTxtEditor';
         document.getElementById('add_program').style.animationPlayState = 'running';
         document.getElementById('ajouteruncours').innerHTML = "<h1>valider</h1>"
+        document.getElementById('txtEditor').className = 'triggerTxtEditor';
+        document.getElementById('add_program').style.marginLeft = 'auto';
+        document.getElementById('add_program').style.marginRight= '0px';
       }
       function startIMG() {
+        document.getElementById('inputType').style.animationFillMode = "none";
+        document.getElementById('inputType').style.opacity = 0;
+        document.getElementById('add_program').style.animationPlayState = 'running';
+        document.getElementById('ajouteruncours').innerHTML = "<h1>valider</h1>"
         document.getElementById('imgEditor').className = 'triggerImgEditor';
+        document.getElementById('add_program').style.marginLeft = '0px';
+        document.getElementById('add_program').style.marginRight= 'auto';
       }
     </script>
   </head>
   <body>
-    <div id="body">
+    <div id="menu">
+      <h2 id="menu_Name">nom</h2>
+    </div>
+    <div id="container">
       <div id="txtEditor">
         <form action="index.html" method="post">
           <textarea id="txtEditorArea" name="text" cols="42" rows="10" placeholder="copiez-collez votre cours ici..."></textarea>
@@ -52,7 +63,7 @@
         <form action="index.html" method="post">
           <input id="inputFile" type="file" name="img" onchange="readURL(this);" accept="image/x-png,image/jpeg,image/tiff">
         </form>
-        <div id="container">
+        <div id="imgContainer">
           <img id="preview" src="" alt="" >
         </div>
       </div>
