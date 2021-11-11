@@ -25,7 +25,7 @@ body {
   text-align: left;
 }
 
-#menu_Name {
+#menu_name {
   display: inline-block;
   margin-left: 1em;
   margin-top: 0.7em;
@@ -192,6 +192,7 @@ body {
 
 #ajouteruncours {
   text-align: center;
+
 }
 
 #inputType {
