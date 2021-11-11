@@ -7,3 +7,4 @@ TODO list
 - [ ] make a good menu
 - [ ] make a better animation for "add_program" (gray to green)
 - [ ] change button's style "+ajouter un cours"
+- [ ] fix "imgEditor"'s preview ratio bug
