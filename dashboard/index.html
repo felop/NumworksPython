@@ -5,26 +5,24 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      $("#txtEditorArea").keyup(function(){
-        $("#add_program").css("animationFillMode","none");
-        $("#add_program").css("animation","none");
-        $("#inputType").remove();
-        $("#add_program").css("paddingBottom","70px");
-        if($(this).val() == "") {
-          $("#add_program").css("backgroundColor","rgb(50,50,50)");
-          $("#add_program").css("color","rgb(150,160,160)");
-          $("#add_program").unwrap();
-        } else {
-          $("#add_program").css("backgroundColor","rgb(50,140,50)");
-          $("#add_program").css("color","rgb(170,210,180)");
-          $("#add_program").wrap("<a href='http://www.google.com' style='text-decoration:none;' />");
-        }
-      });
-    });
-    </script>
     <script type="text/javascript">
+      $(document).ready(function(){
+        $("#txtEditorArea").keyup(function(){
+          $("#add_program").css("animationFillMode","none");
+          $("#add_program").css("animation","none");
+          $("#inputType").remove();
+          $("#add_program").css("paddingBottom","70px");
+          if($(this).val() == "") {
+            $("#add_program").css("backgroundColor","rgb(60,60,60)");
+            $("#add_program").css("color","rgb(150,160,160)");
+            $("#add_program").unwrap();
+          } else {
+            $("#add_program").css("backgroundColor","rgb(50,140,50)");
+            $("#add_program").css("color","rgb(170,210,180)");
+            $("#add_program").wrap("<a href='http://www.google.com' style='text-decoration:none;' />");
+          }
+        });
+      });
       function readURL(input) {
         if (input.files && input.files[0]) {
           var reader = new FileReader();
@@ -57,8 +55,12 @@
         document.getElementById('add_program').style.animationPlayState = 'running';
         document.getElementById('ajouteruncours').innerHTML = "<h1>valider &#8594;</h1>"
         document.getElementById('txtEditor').className = 'triggerTxtEditor';
+        document.getElementById('txtEditorSubDiv').style.opacity = "0";
+        $('#txtForm').unwrap();
+        $('#imgEditor').remove();
         document.getElementById('add_program').style.marginLeft = 'auto';
-        document.getElementById('add_program').style.marginRight= '0px';
+        document.getElementById('add_program').style.marginRight = '0px';
+        setTimeout(function() {document.getElementById('txtEditorArea').style.visibility = 'visible'}, 400);
       }
       function startIMG() {
         document.getElementById('inputType').style.animationFillMode = "none";
@@ -66,28 +68,36 @@
         document.getElementById('add_program').style.animationPlayState = 'running';
         document.getElementById('ajouteruncours').innerHTML = "<h1>valider</h1>"
         document.getElementById('imgEditor').className = 'triggerImgEditor';
+        document.getElementById('imgEditorSubDiv').style.opacity = "1";
+        $('#txtEditor').remove();
         document.getElementById('add_program').style.marginLeft = '0px';
-        document.getElementById('add_program').style.marginRight= 'auto';
+        document.getElementById('add_program').style.marginRight = 'auto';
       }
     </script>
   </head>
   <body>
     <div id="menu">
-      <h2 id="menu_name">nom du site</h2>
+      <h2 id="menu_name">NOM DU SITE</h2>
+      <img id="numworksLogo" src="NumworksUsb.png" alt="">
     </div>
     <div id="container">
+
       <div id="txtEditor">
-        <form action="index.html" method="post">
-          <textarea id="txtEditorArea" name="text" cols="42" rows="10" placeholder="copiez-collez votre cours ici..."></textarea>
-        </form>
+        <div id="txtEditorSubDiv">
+          <form id="txtForm" action="index.html" method="post">
+            <textarea id="txtEditorArea" name="text" cols="42" rows="10" placeholder="copiez-collez votre cours ici..."></textarea>
+          </form>
+        </div>
       </div>
 
       <div id="imgEditor">
-        <form action="index.html" method="post">
-          <input id="inputFile" type="file" name="img" onchange="readURL(this);" accept="image/x-png,image/jpeg,image/tiff">
-        </form>
-        <div id="imgContainer">
-          <img id="preview" src="" alt="" >
+        <div id="imgEditorSubDiv">
+          <form action="index.html" method="post">
+            <input id="inputFile" type="file" name="img" onchange="readURL(this);" accept="image/x-png,image/jpeg,image/tiff">
+          </form>
+          <div id="imgContainer">
+            <img id="preview" src="" alt="" >
+          </div>
         </div>
       </div>
 
@@ -102,6 +112,7 @@
           </div>
         </div>
       </div>
+
 
     </div>
   </body>
