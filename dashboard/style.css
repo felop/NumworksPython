@@ -10,8 +10,8 @@ body {
 }
 
 @font-face {
-  font-family: "baby-blocks";
-  src: url("babyblocks.ttf") format("truetype");
+  font-family: "titleFont";
+  src: url("fonts/kindergarten.ttf") format("truetype");
 }
 
 #container {
@@ -24,14 +24,22 @@ body {
 }
 
 #bottomContainer {
-  margin-top: 1.7%;
+  margin-top: 2%;
   width: 100%;
-  height: 200px;
+  height: 20%;
   border-radius: 13px;
   display: inline-block;
   background-color: rgb(60, 60, 60);
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.article {
+  width: 94%;
+  height: 94%;
+  position: relative;
   text-align: left;
-  padding-top: 1em;
+  margin: 2.5% 3% 3% 3%;
 }
 
 #menu {
@@ -47,7 +55,7 @@ body {
 }
 
 #menu_name {
-  font-family: "baby-blocks";
+  font-family: "titleFont";
   display: inline-block;
   margin-left: 1em;
   margin-top: 0.7em;
@@ -69,7 +77,7 @@ body {
   height: 225px;
   margin-right: 1.7%;
   display: block;
-  background-image: url("numworksDark.png");
+  background-image: url("pics/numworksDark.png");
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -81,7 +89,7 @@ body {
   display: block;
   position: relative;
   animation: TxtEditor;
-  animation-duration: 0.3s;
+  animation-duration: 0.4s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -118,6 +126,7 @@ body {
   float: right;
   background-color: rgb(37,37,37);
   border-radius: 13px;
+  margin-left: 1.7%;
   width: 22.8%;
   height: 225px;
   display: block;
@@ -203,16 +212,16 @@ body {
   {padding-top: 70px;
   padding-bottom: 0px;}
   45%
-  {padding-bottom: 40px;
-  padding-top: 30px;}
+  {padding-top: 30px;
+  padding-bottom: 40px;}
   55%
   {background-color: rgb(200,50,50);
-   padding-bottom: 40px;
-   padding-top: 30px;}
+  padding-top: 30px;
+  padding-bottom: 40px;}
   100%
   {background-color: rgb(60,60,60);
-   padding-top: 70px;
-   padding-bottom: 0px;}
+  padding-top: 70px;
+  padding-bottom: 0px;}
 }
 
 .turnIntoButton {
