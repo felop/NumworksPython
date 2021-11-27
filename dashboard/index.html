@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
+      function subTxtForm() {
+        if ($("#txtEditorArea").val() !== "") {
+          document.forms["txtForm"].submit();
+        }
+      }
+      function subImgForm() {
+        document.forms["imgForm"].submit();
+      }
       $(document).ready(function(){
         $("#txtEditorArea").keyup(function(){
           $("#add_program").css("animationFillMode","none");
@@ -19,7 +27,7 @@
           } else {
             $("#add_program").css("backgroundColor","rgb(50,140,50)");
             $("#add_program").css("color","rgb(170,210,180)");
-            $("#add_program").wrap("<a href='http://www.google.com' style='text-decoration:none;' />");
+            $("#add_program").wrap("<span onclick='subTxtForm();' />");
           }
         });
       });
@@ -35,7 +43,7 @@
             $("#add_program").css("paddingBottom","70px");
             $("#add_program").css("backgroundColor","rgb(50,140,50)");
             $("#add_program").css("color","rgb(170,210,180)");
-            $("#add_program").wrap("<a href='http://www.google.com' style='text-decoration:none;' />");
+            $("#add_program").wrap("<span onclick='subImgForm();' />");
           };
           reader.readAsDataURL(input.files[0]);
         }
@@ -55,7 +63,7 @@
         document.getElementById('add_program').style.animationPlayState = 'running';
         document.getElementById('inputType').style.animationFillMode = "none";
         document.getElementById('inputType').style.opacity = 0;
-        document.getElementById('ajouteruncours').innerHTML = "<h1>valider &#8594;</h1>"
+        document.getElementById('ajouteruncours').innerHTML = "<h1>valider</h1>"
         document.getElementById('txtEditor').className = 'triggerTxtEditor';
         document.getElementById('txtEditorSubDiv').style.opacity = "0";
         document.getElementById('add_program').style.float = "left";
@@ -98,7 +106,7 @@
 
       <div id="imgEditor">
         <div id="imgEditorSubDiv">
-          <form action="index.html" method="post">
+          <form id="imgForm" action="index.html" method="post">
             <input id="inputFile" type="file" name="img" onchange="readURL(this);" accept="image/x-png,image/jpeg,image/tiff">
           </form>
           <div id="imgContainer">
