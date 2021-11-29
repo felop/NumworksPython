@@ -4,7 +4,7 @@ window.mobileAndTabletCheck = function() {
   return check;
 };
 if (window.mobileAndTabletCheck() === true) {
-  window.location.replace("error/index.html");
+  window.location.replace("error.html");
 }
 
 function subTxtForm() {
