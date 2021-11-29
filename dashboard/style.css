@@ -185,7 +185,7 @@ body {
   border-radius: 13px;
   width: 51%;
   height: 200%;
-  background-color: rgb(200,50,50);
+  background-color: rgb(190,40,40);
   display: flex;
   text-align: center;
   vertical-align: middle;
@@ -209,7 +209,7 @@ body {
   {padding-top: 30px;
   padding-bottom: 40px;}
   55%
-  {background-color: rgb(200,50,50);
+  {background-color: rgb(190,40,40);;
   padding-top: 30px;
   padding-bottom: 40px;}
   100%
@@ -228,14 +228,13 @@ body {
 
 @keyframes AddProgramToButton {
   from
-  {background-color: rgb(200,50,50);}
+  {background-color: rgb(190,40,40);}
   to
   {background-color: rgb(50,50,200);}
 }
 
 #ajouteruncours {
   text-align: center;
-
 }
 
 #inputType {
