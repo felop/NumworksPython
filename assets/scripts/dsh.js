@@ -7,6 +7,11 @@ if (window.mobileAndTabletCheck() === true) {
   window.location.replace("error.html");
 }
 
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+
 function subTxtForm() {
   if ($("#txtEditorArea").val() !== "") {
     document.forms["txtForm"].submit();
