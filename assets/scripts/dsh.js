@@ -21,18 +21,20 @@ $(document).ready(function(){
     $("#add_program").css("animation","none");
     $("#inputType").remove();
     $("#add_program").css("paddingBottom","70px");
+    var cssVars = getComputedStyle(document.body);
     if($(this).val() == "") {
-      $("#add_program").css("backgroundColor","rgb(60,60,60)");
-      $("#add_program").css("color","rgb(150,160,160)");
+      $("#add_program").css("backgroundColor",cssVars.getPropertyValue("--add_program-bg-color-reveal"));
+      $("#add_program").css("color",cssVars.getPropertyValue("--add_program-text-color-reveal"));
       $("#add_program").unwrap();
     } else {
-      $("#add_program").css("backgroundColor","rgb(50,140,50)");
-      $("#add_program").css("color","rgb(170,210,180)");
+      $("#add_program").css("backgroundColor",cssVars.getPropertyValue("--add_program-bg-color-green"));
+      $("#add_program").css("color",cssVars.getPropertyValue("--add_program-text-color-green"));
       $("#add_program").wrap("<span onclick='subTxtForm();' />");
     }
   });
 });
 function readURL(input) {
+  var cssVars = getComputedStyle(document.body);
   if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function (e) {
@@ -42,8 +44,8 @@ function readURL(input) {
       $("#add_program").css("animation","none");
       $("#inputType").remove();
       $("#add_program").css("paddingBottom","70px");
-      $("#add_program").css("backgroundColor","rgb(50,140,50)");
-      $("#add_program").css("color","rgb(170,210,180)");
+      $("#add_program").css("backgroundColor",cssVars.getPropertyValue("--add_program-bg-color-green"));
+      $("#add_program").css("color",cssVars.getPropertyValue("--add_program-text-color-green"));
       $("#add_program").wrap("<span onclick='subImgForm();' />");
     };
     reader.readAsDataURL(input.files[0]);
@@ -70,7 +72,7 @@ function startTXT() {
   document.getElementById('add_program').style.float = "left";
   document.getElementById('bottomContainer').style.opacity = "0";
   $('#unwrapMe1').unwrap();$('#unwrapMe2').unwrap();
-  $('#bottomContainer').remove();
+  setTimeout(function() {$('#bottomContainer').remove();}, 200);
   $('#txtForm').unwrap();
   $('#imgEditor').remove();
   setTimeout(function() {document.getElementById('txtEditorArea').style.visibility = 'visible'}, 400);
@@ -85,6 +87,6 @@ function startIMG() {
   document.getElementById('imgEditorSubDiv').style.opacity = "1";
   document.getElementById('bottomContainer').style.opacity = "0";
   $('#unwrapMe1').unwrap();$('#unwrapMe2').unwrap();
-  $('#bottomContainer').remove();
+  setTimeout(function() {$('#bottomContainer').remove();}, 200);
   $('#txtEditor').remove();
 }

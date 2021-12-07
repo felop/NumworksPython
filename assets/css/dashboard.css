@@ -1,7 +1,49 @@
+:root {
+    --menu-color: rgb(255,110,110);
+    --text-color: rgb(55,45,45);
+    --bg-color: rgb(243,243,243);
+    --txtEditor-bg-color: rgb(218,218,218);
+    --txtEditorSubDiv-bg-color:rgb(218,218,218);
+    --txtEditorArea-bg-color: rgb(255,251,255);
+    --txtEditorArea-text-color: black;
+    --numworksImg: url("../pics/numworksLight.png");
+    --imgEditor-bg-color: rgb(218,218,218);
+    --inputFile-bg-color: rgb(175,175,175);
+    --add_program-bg-color: rgb(215,65,65);
+    --add_program-text-color: rgb(220,230,230);
+    --add_program-bg-color-reveal: rgb(195,195,195);
+    --add_program-text-color-reveal: rgb(55,45,45);
+    --add_program-bg-color-green: rgb(120,220,120);
+    --add_program-text-color-green: rgb(45,75,45);
+    --AddProgramToButton-bg-color: rgb(55,55,200);
+    --article-color: rgb(195, 195, 195);
+}
+
+[data-theme="dark"] {
+    --menu-color: rgb(100,20,20);
+    --text-color: rgb(200,210,210);
+    --bg-color: rgb(12,12,12);
+    --txtEditor-bg-color: rgb(37,37,37);
+    --txtEditorSubDiv-bg-color: rgb(37,37,37);
+    --txtEditorArea-bg-color: rgb(0,4,0);
+    --txtEditorArea-text-color: white;
+    --numworksImg: url("../pics/numworksDark.png");
+    --imgEditor-bg-color: rgb(37,37,37);
+    --inputFile-bg-color: rgb(80,80,80);
+    --add_program-bg-color: rgb(190,40,40);
+    --add_program-text-color: rgb(200,210,210);
+    --add_program-bg-color-reveal: rgb(60,60,60);
+    --add_program-text-color-reveal: rgb(200,210,210);
+    --add_program-bg-color-green: rgb(50,140,50);
+    --add_program-text-color-green: rgb(170,210,180);
+    --AddProgramToButton-bg-color: rgb(50,50,200);
+    --article-color: rgb(60, 60, 60);
+}
+
 body {
-  background-color: rgb(12,12,12);
+  background-color: var(--bg-color);
   text-align: center;
-  color: rgb(200,210,210);
+  color: var(--text-color);
 
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -24,7 +66,7 @@ body {
   height: 20%;
   border-radius: 13px;
   display: inline-block;
-  background-color: rgb(60, 60, 60);
+  background-color: var(--article-color);
   opacity: 1;
   transition: opacity 0.2s linear;
 }
@@ -38,7 +80,7 @@ body {
 }
 
 #menu {
-  background-color: rgb(100,20,20);
+  background-color: var(--menu-color);
   border-radius: 13px;
   width: 60%;
   height: 60px;
@@ -65,13 +107,14 @@ body {
 
 #txtEditor {
   float: left;
-  background-color: rgb(37,37,37);
+  background-color: var(--txtEditor-bg-color);
+  color: rgb(55,45,45);
   border-radius: 13px;
   width: 22.8%;
   height: 225px;
   margin-right: 1.7%;
   display: block;
-  background-image: url("../pics/numworksDark.png");
+  background-image: var(--numworksImg);
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -94,7 +137,7 @@ body {
 }
 
 #txtEditorSubDiv {
-  background-color: rgb(37,37,37);
+  background-color: var(--txtEditorSubDiv-bg-color);
   transition: opacity 0.3s ease-out;
   height: 100%;
   width: 100%;
@@ -104,10 +147,10 @@ body {
 
 #txtEditorArea {
   resize: none;
-  background-color: rgb(0,4,0);
+  background-color: var(--txtEditorArea-bg-color);
   z-index: 1;
   border: none;
-  color: white;
+  color: var(--txtEditorArea-text-color);
   position:absolute;
   bottom: 42.6%;
   width: 52.6%;
@@ -115,10 +158,14 @@ body {
   transform: translateX(-50%);
   visibility: hidden;
 }
+#txtEditorArea:focus {
+    outline: none !important;
+  }
 
 #imgEditor {
   float: right;
-  background-color: rgb(37,37,37);
+  background-color: var(--imgEditor-bg-color);
+  color: rgb(55,45,45);
   border-radius: 13px;
   margin-left: 1.7%;
   width: 22.8%;
@@ -175,7 +222,7 @@ body {
 #inputFile::before {
   content: 'Selectionner une image';
   display: inline-block;
-  background-color: rgb(80,80,80);
+  background-color: var(--inputFile-bg-color);
   border-radius: 15px;
   padding: 18px 12px;
 }
@@ -185,7 +232,7 @@ body {
   border-radius: 13px;
   width: 51%;
   height: 200%;
-  background-color: rgb(190,40,40);
+  background-color: var(--add_program-bg-color);
   display: flex;
   text-align: center;
   vertical-align: middle;
@@ -193,6 +240,7 @@ body {
   padding-top: 70px;
   padding-bottom: 0px;
   z-index: 5;
+  color: var(--add_program-text-color);
 
   animation: AddProgramReveal;
   animation-duration: 0.5s;
@@ -209,11 +257,13 @@ body {
   {padding-top: 30px;
   padding-bottom: 40px;}
   55%
-  {background-color: rgb(190,40,40);;
+  {background-color: var(--add_program-bg-color);
+  color: var(--add_program-text-color);
   padding-top: 30px;
   padding-bottom: 40px;}
   100%
-  {background-color: rgb(60,60,60);
+  {background-color: var(--add_program-bg-color-reveal);
+  color: var(--add_program-text-color-reveal);
   padding-top: 70px;
   padding-bottom: 0px;}
 }
@@ -228,9 +278,9 @@ body {
 
 @keyframes AddProgramToButton {
   from
-  {background-color: rgb(190,40,40);}
+  {background-color: var(--add_program-bg-color);}
   to
-  {background-color: rgb(50,50,200);}
+  {background-color: var(--AddProgramToButton-bg-color);}
 }
 
 #ajouteruncours {
