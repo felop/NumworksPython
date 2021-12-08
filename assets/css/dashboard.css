@@ -1,4 +1,4 @@
-:root, [data-theme="dark"] {
+:root, [data-theme="light"] {
     --menu-color: rgb(255,110,110);
     --text-color: rgb(55,45,45);
     --bg-color: rgb(243,243,243);
@@ -226,6 +226,7 @@ body {
   content: 'Selectionner une image';
   display: inline-block;
   background-color: var(--inputFile-bg-color);
+  color: var(--text-color);
   border-radius: 15px;
   padding: 18px 12px;
 }
