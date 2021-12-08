@@ -1,4 +1,4 @@
-:root {
+:root, [data-theme="dark"] {
     --menu-color: rgb(255,110,110);
     --text-color: rgb(55,45,45);
     --bg-color: rgb(243,243,243);
@@ -34,7 +34,7 @@
     --add_program-text-color: rgb(200,210,210);
     --add_program-bg-color-reveal: rgb(60,60,60);
     --add_program-text-color-reveal: rgb(200,210,210);
-    --add_program-bg-color-green: rgb(50,140,50);
+    --add_program-bg-color-green: rgb(50,130,50);
     --add_program-text-color-green: rgb(170,210,180);
     --AddProgramToButton-bg-color: rgb(50,50,200);
     --article-color: rgb(60, 60, 60);
@@ -58,6 +58,7 @@ body {
   width: 60%;
   height: 100%;
   padding-top: 0px;
+  min-width: 1000px;
 }
 
 #bottomContainer {
@@ -83,6 +84,7 @@ body {
   background-color: var(--menu-color);
   border-radius: 13px;
   width: 60%;
+  min-width: 1000px;
   height: 60px;
   margin-top: 30px;
   margin-left: auto;
@@ -112,6 +114,7 @@ body {
   border-radius: 13px;
   width: 22.8%;
   height: 225px;
+  min-height: 0px;
   margin-right: 1.7%;
   display: block;
   background-image: var(--numworksImg);
@@ -132,8 +135,8 @@ body {
 }
 
 @keyframes TxtEditor {
-  0%   {width: 24%;height: 11.75vw;}
-  100% {width: 47%;height: 28vw;}
+  0%   {width: 24%;height: 11.75vw;min-height: 0px;}
+  100% {width: 47%;height: 28vw;min-height: 470px;}
 }
 
 #txtEditorSubDiv {
@@ -159,8 +162,8 @@ body {
   visibility: hidden;
 }
 #txtEditorArea:focus {
-    outline: none !important;
-  }
+  outline: none !important;
+}
 
 #imgEditor {
   float: right;
