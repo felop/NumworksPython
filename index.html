@@ -2,15 +2,60 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Don't Work - Welcome</title>
-    <link rel="stylesheet" href="assets/css/welcome.css">
-    <!--<script type="text/javascript">
-      window.location.replace("dashboard.html");
-    </script>-->
+    <title>Don't Work - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/scripts/dsh.js"></script>
   </head>
   <body>
-    <div id="centered_container">
-        plug your numworks calculator
+    <div id="menu">
+      <h2 id="menu_name">Don't Work</h2>
+      <img id="numworksLogo" src="assets/pics/NumworksUsb.png" alt="">
+    </div>
+    <div id="container">
+
+      <div id="txtEditor">
+        <div id="txtEditorSubDiv">
+          <form id="txtForm" action="index.html" method="POST">
+            <textarea id="txtEditorArea" name="text" cols="42" rows="10" placeholder="copiez-collez votre cours ici..."></textarea>
+          </form>
+        </div>
+      </div>
+
+      <div id="imgEditor">
+        <div id="imgEditorSubDiv">
+          <form id="imgForm" action="index.html" method="POST">
+            <input id="inputFile" type="file" name="img" onchange="readURL(this);" accept="image/x-png,image/jpeg,image/tiff">
+          </form>
+          <div id="imgContainer">
+            <img id="preview" src="" alt="" >
+          </div>
+        </div>
+      </div>
+
+      <div id="add_program" onclick="ajouteruncours()" value="Click">
+        <div id="ajouteruncours"><h1>＋ ajouter un cours</h1></div>
+        <div id="inputType">
+          <div class="input" id="inputImg">
+            <h4><span id="unwrapMe1">ajouter un fichier texte</span></h4>
+          </div>
+          <div class="input" id="inputTxt">
+            <h4><span id="unwrapMe2">ajouter une photo</span></h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottomContainer">
+        <div class="article">
+          <h2>titre</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est leo, iaculis at gravida in, pulvinar eu risus. Fusce sed blandit nisl. Aenean tincidunt dignissim mauris, vitae aliquam erat sollicitudin tempor. Nulla non faucibus dui. Nulla nulla eros, hendrerit quis ex et, condimentum feugiat libero. Pellentesque consequat tempor purus. Cras placerat ligula non elementum ullamcorper. In in erat convallis, rutrum turpis a, volutpat mi. Quisque in odio in velit mollis venenatis eget eget eros.
+
+Proin sagittis vulputate erat. Quisque sit amet tortor laoreet, commodo felis non, bibendum turpis. Nam auctor risus elementum ante eleifend ullamcorper. Pellentesque eu metus lacus. Donec imperdiet lorem ex. Donec euismod scelerisque felis, molestie ullamcorper augue semper in. Fusce condimentum dui sed nisl pretium hendrerit. Curabitur risus ante, cursus sit amet efficitur in, cursus vestibulum nunc.
+
+Ut vitae pharetra eros, eget consequat purus. Vivamus egestas sed risus ac tincidunt. Etiam ut mi blandit, porttitor mauris id, facilisis ex. Donec eu odio id elit tincidunt ultricies vitae et urna. Curabitur eu nulla eu velit dictum condimentum a vel justo. Praesent vestibulum justo non diam auctor, nec laoreet leo efficitur. Duis vel dui nec nisl venenatis commodo. Vivamus massa nisi, consequat ut dolor et, congue ornare orci. Nunc orci nisl, porttitor quis diam ac, interdum dignissim odio.</p>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
