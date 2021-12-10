@@ -20,7 +20,7 @@
 }
 
 [data-theme="dark"] {
-    --menu-color: rgb(100,20,20);
+    --menu-color: rgb(110,20,20);
     --text-color: rgb(200,210,210);
     --bg-color: rgb(12,12,12);
     --txtEditor-bg-color: rgb(37,37,37);
@@ -34,7 +34,7 @@
     --add_program-text-color: rgb(200,210,210);
     --add_program-bg-color-reveal: rgb(60,60,60);
     --add_program-text-color-reveal: rgb(200,210,210);
-    --add_program-bg-color-green: rgb(50,130,50);
+    --add_program-bg-color-green: rgb(20,110,20);
     --add_program-text-color-green: rgb(170,210,180);
     --AddProgramToButton-bg-color: rgb(50,50,200);
     --article-color: rgb(60, 60, 60);
