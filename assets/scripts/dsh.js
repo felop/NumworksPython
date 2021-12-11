@@ -4,7 +4,7 @@ window.mobileAndTabletCheck = function() {
   return check;
 };
 if (window.mobileAndTabletCheck() === true) {
-  //window.location.replace("mobile.html");
+  window.location.replace("mobile.html");
 }
 
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
