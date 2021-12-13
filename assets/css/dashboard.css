@@ -246,6 +246,8 @@ body {
   z-index: 5;
   color: var(--add_program-text-color);
 
+  transition: opacity 0.25s;
+
   animation: AddProgramReveal;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -285,6 +287,10 @@ body {
   {background-color: var(--add_program-bg-color);}
   to
   {background-color: var(--AddProgramToButton-bg-color);}
+}
+
+#add_program:hover {
+  opacity: 0.9;
 }
 
 #ajouteruncours {
