@@ -10,13 +10,17 @@
     --imgEditor-bg-color: rgb(218,218,218);
     --inputFile-bg-color: rgb(175,175,175);
     --add_program-bg-color: rgb(215,65,65);
-    --add_program-text-color: rgb(220,230,230);
+    --add_program-text-color: rgb(10,10,10);
+    --add_program-text-shadow: rgba(200,200,200,0.5);
     --add_program-bg-color-reveal: rgb(195,195,195);
     --add_program-text-color-reveal: rgb(55,45,45);
     --add_program-bg-color-green: rgb(120,220,120);
     --add_program-text-color-green: rgb(45,75,45);
     --AddProgramToButton-bg-color: rgb(55,55,200);
     --article-color: rgb(195, 195, 195);
+    --A: url("../pics/A2.jpg");
+    --B: url("../pics/B2.jpg");
+    --C: url("../pics/C2.jpg");
 }
 
 [data-theme="dark"] {
@@ -32,18 +36,24 @@
     --inputFile-bg-color: rgb(80,80,80);
     --add_program-bg-color: rgb(190,40,40);
     --add_program-text-color: rgb(200,210,210);
+    --add_program-text-shadow: rgba(12,12,12,1);
     --add_program-bg-color-reveal: rgb(60,60,60);
     --add_program-text-color-reveal: rgb(200,210,210);
     --add_program-bg-color-green: rgb(20,110,20);
     --add_program-text-color-green: rgb(170,210,180);
     --AddProgramToButton-bg-color: rgb(50,50,200);
     --article-color: rgb(60, 60, 60);
+    --A: url("../pics/A1.jpg");
+    --B: url("../pics/B1.jpg");
+    --C: url("../pics/C1.jpg");
+
 }
 
 body {
   background-color: var(--bg-color);
   text-align: center;
   color: var(--text-color);
+  font-family: Helvetica;
 
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -72,7 +82,7 @@ body {
   transition: opacity 0.2s linear;
 }
 
-.article {
+#article {
   width: 94%;
   height: 94%;
   position: relative;
@@ -91,6 +101,7 @@ body {
   margin-right: auto;
   margin-bottom: 1.3%;
   text-align: left;
+  font-family: MS Sans Serif;
 }
 
 #menu_name {
@@ -236,7 +247,11 @@ body {
   border-radius: 13px;
   width: 51%;
   height: 200%;
+  background-image: var(--B);
+  background-size: cover;
+  background-position: center;
   background-color: var(--add_program-bg-color);
+
   display: flex;
   text-align: center;
   vertical-align: middle;
@@ -245,6 +260,10 @@ body {
   padding-bottom: 0px;
   z-index: 5;
   color: var(--add_program-text-color);
+  text-shadow: -1px  1px 0 var(--add_program-text-shadow),
+                1px  1px 0 var(--add_program-text-shadow),
+                1px -1px 0 var(--add_program-text-shadow),
+               -1px -1px 0 var(--add_program-text-shadow);
 
   transition: opacity 0.25s;
 
@@ -335,4 +354,13 @@ body {
 #inputTxt {
   float: right;
   border-left: solid 2px rgb(210,210,210);
+}
+
+#A1 {
+  background-image: var(--B);
+  background-size: cover;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  margin: 0px -6px 27px 0px;
 }
