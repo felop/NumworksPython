@@ -284,21 +284,6 @@ body {
   padding-bottom: 0px;}
 }
 
-.turnIntoButton {
-  animation: AddProgramToButton;
-  animation-duration: 0.25s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-play-state: running;
-}
-
-@keyframes AddProgramToButton {
-  from
-  {background-color: var(--add_program-bg-color);}
-  to
-  {background-color: var(--AddProgramToButton-bg-color);}
-}
-
 #add_program:hover {
   opacity: 0.9;
 }
